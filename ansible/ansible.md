@@ -2,7 +2,7 @@
 
 Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder Korrektheit
 
-## Grundgerüst
+## Grundgerüst für Playbooks
 ```
 - hosts: all
   become: yes
@@ -34,6 +34,7 @@ Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder
 ```
 hosts.ini
 playbook.yml
+host_vars
 roles/
   ├── defaults
   │     └── main.yml
@@ -54,6 +55,19 @@ Erstellen einer Rollen mit:
   $ ansible-galaxy init <rollenname>
 ```
 
+## Inventory
+```
+[groupname]
+<hostname>
+<fqdn> <variable1>=<value1> <variable2>=<value2>
+```
+
+## Varaiblen
+Variablen können definiert werden
+  * im Playbook (Schlüsselwort vars:)
+  * in der Datei: ``/host_vars/<hostname>.yaml`` für eine Host
+  * in der Datei  ``/host_vars/<groupname>.yaml`` für alle Mitglieder der Gruppe <groupname> im Inventory
+
 ## Aufruf
 ```
 # Übergeben eines privaten Schlüssels
@@ -66,5 +80,3 @@ $ ansible-playbook -i hosts.ini playbook.yml <options>
 | ``--ask-becom-pass`` | Fragen nachdem sudo-Passwort |
 | ``--become-user <Username>`` | Definieren zu welchem Benutzer gewechselt werden soll |
 | ``--extra-vars "version=42"`` | Übergeben von Variablen |
-
-
