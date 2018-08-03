@@ -62,12 +62,19 @@ Erstellen einer Rollen mit:
 <fqdn> <variable1>=<value1> <variable2>=<value2>
 ```
 
-## Varaiblen
-Variablen können definiert werden
+## Variablen
+Variablen können definiert werden:
   * im Playbook (Schlüsselwort vars:)
   * in der Datei: ``/host_vars/<hostname>.yaml`` für eine Host
   * in der Datei  ``/host_vars/<groupname>.yaml`` für alle Mitglieder der Gruppe <groupname> im Inventory
 
+#### Zugriff
+  * ``{{var}}``
+  * ``{{var.key}}``
+  
+#### Filter
+
+  
 ## Aufruf
 ```
 # Übergeben eines privaten Schlüssels
