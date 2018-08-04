@@ -1,7 +1,7 @@
 # Virtuelle Umgebung
 
 ## benötigtes Paket
-  * **Debian: ** ``virtualenv``
+  * **Debian:** ``virtualenv``
 
 ## Einrichten
 ```
