@@ -16,7 +16,7 @@ VALUES (<wert1>, <wert2>, <wert3>, ...)
 ## Ändern
 ```
 UPDATE <tabelle>
-SET <spalte1>=<value1>, <spalte1>=<value1>, <spalte1>=<value1>, ...
+SET <spalte1>=<value1>, <spalte2>=<value2>, <spalte3>=<value3>, ...
 WHERE <Bedingung>
 ```
 
