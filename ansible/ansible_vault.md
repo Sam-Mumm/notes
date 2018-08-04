@@ -25,6 +25,10 @@ $ ansible-vault edit <file>.yml
 ## Verwendung
 
 ## Passwortübergabe
-### per Datei
+```
+# Übergabe des vault-Passworts als Datei
+$ ansible-playbook -i hosts.ini site.yml --vault-password-file /pfad/zur/passwort/datei
 
-### im Playbook-Aufruf
+# Abfragen des Passworts beim Aufruf
+$ ansible-playbook -i hosts.ini site.yml --ask-vault-pass
+```

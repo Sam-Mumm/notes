@@ -84,6 +84,8 @@ $ ansible-playbook -i hosts.ini playbook.yml <options>
 | --- | ---
 | ``--private-key=/path/to/ssh/private/key`` | Privaten SSH-Key übergeben |
 | ``--ask-pass`` | Fragen nachdem User-Passwort
-| ``--ask-becom-pass`` | Fragen nachdem sudo-Passwort |
+| ``--ask-becom-pass`` | Frage nach dem sudo-Passwort |
+| ``--ask-vault-pass`` | Frage nach dem vault-Passwort |
+| ``--vault-password-file=/path/to/password/file`` | Pfad zur Passwort-Datei (Passwort im Klartext | 
 | ``--become-user <Username>`` | Definieren zu welchem Benutzer gewechselt werden soll |
 | ``--extra-vars "version=42"`` | Übergeben von Variablen |
