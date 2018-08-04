@@ -6,7 +6,10 @@ $ ansible-vault create <file>.yml
 ```
 
 ## Syntax im Vault
-
+Zu verwenden wie eine normale Variable Datei z.B.:
+```
+<variable>: <value>
+```
 
 ## Verschlüsseln / Entschlüsseln
 ```
@@ -24,7 +27,7 @@ $ ansible-vault edit <file>.yml
 
 ## Verwendung
 
-## Passwortübergabe
+### Passwortübergabe
 ```
 # Übergabe des vault-Passworts als Datei
 $ ansible-playbook -i hosts.ini site.yml --vault-password-file /pfad/zur/passwort/datei

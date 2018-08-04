@@ -25,3 +25,25 @@ WHERE <Bedingung>
 DELETE FROM <tabelle>
 WHERE <Bedingung>
 ```
+
+## Anlegen von einer Datenbank
+```
+CREATE DATABASE <datenbankname> CHARACTER SET <Zeichensatz>
+```
+
+## Anlegen von einer Tabelle 
+```
+CREATE TABLE <tabelle> (
+	<spalte1> <datentyp> <eigenschaft>
+)
+```
+gültige Datentypen u.a.
+  * INT
+  * VARCHAR(N)
+  * TIMESTAMP
+
+gültige Eigenschaften u.a.
+  * NOT NULL
+  * PRIMARY KEY
+  * AUTO_INCREMENT
+  * UNSIGNED

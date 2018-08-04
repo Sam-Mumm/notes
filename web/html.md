@@ -1,6 +1,6 @@
 # HTML
 
-# Grundgerüst
+## Grundgerüst
 ```
 <!DOCTYPE html>
 <html>
@@ -24,3 +24,6 @@
 	</body>
 </html>
 ```
+
+## Grundfarben
+

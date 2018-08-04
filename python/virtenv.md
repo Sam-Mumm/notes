@@ -1,5 +1,15 @@
 # Virtuelle Umgebung
 
-# Einrichten
+## benötigtes Paket
+  * **Debian: ** ``virtualenv``
 
-# Nutzen
+## Einrichten
+```
+mkdir <Directory>
+virtualenv <Directory>
+```
+
+## Nutzen
+```
+source <Directory>/bin/activate
+```
