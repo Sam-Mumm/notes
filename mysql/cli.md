@@ -5,3 +5,5 @@
 
 ## Setzen der Rechte für einen Benutzer
 
+
+## Backup/Restore einer Datenbank

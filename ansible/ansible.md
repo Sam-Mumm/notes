@@ -4,7 +4,7 @@ Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder
 
 ## Grundgerüst für Playbooks
 ```
-- hosts: all
+- hosts: <groupname> 
   become: yes
   become_user: apache
   vars:
