@@ -17,16 +17,44 @@ Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5
         mode: 0644
         backup: yes
 ```
-**Modul-Documentation: ** https://docs.ansible.com/ansible/2.5/modules/copy_module.html
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/copy_module.html
 
 ### File-Task
+```
+- hosts: all
+  tasks:
+    - name: create a link from /etc/passwd to /tmp/passwd
+      file:
+        src: /etc/passwd
+        dest: /tmp/passwd
+        state: link 
 
+    - name: create a file /tmp/foobar
+      file:
+        path: /tmp/foobar
+        state: touch
+        owner: dsteffen
+        group: dsteffen
+        mode: 0644
+```
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/file_module.html#file-module
 
 ## Erweiterte Funktionen
 ### Schleifen-Loop
+#### with_items
+#### with_lines
 
 ### Lookups
+#### Generate Passwords
+
 
 ## sonstiges
 ### Debug
-
+```
+- hosts: all
+  tasks:
+    - name: Display Hello World
+      debug:
+        msg: "Hello World"
+```
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/debug_module.html
