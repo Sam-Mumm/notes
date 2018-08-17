@@ -26,4 +26,4 @@
 ```
 
 ## Grundfarben
-
+![RGB](rgb.png)
