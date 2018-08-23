@@ -1,7 +1,7 @@
 # Jinja2
 
-# Kontrollstrukturen
-## if-Abfrage
+## Kontrollstrukturen
+### if-Abfrage
 ```
 {% if <condition> %}
   <ResultA>
@@ -16,7 +16,8 @@
 | ``even(<value>)`` | Liefert true wenn die Variable gerade ist |
 | ``odd(<value>)`` | Liefert true wenn die Variable ungerade ist |
 
-## for-Schleife
+## Schleifen
+### for-Schleife
 ```
 {% for <variable> in <array> %}
   {{variable}}
