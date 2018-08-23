@@ -6,6 +6,7 @@
 | p | Einfügen |
 
 # Optionen
+| Parameter | Erklärung |
 | -- | -- |
 |``set bg=dark``|Umschalten bei dunklen Hintergrund|
 |``set number``|Einschalten der Zeilenummern|
