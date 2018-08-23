@@ -4,6 +4,8 @@
 ```
 chmod [-R] <Rechte> <Datei/Verzeichnis>
 ```
+| Wert | Bedeutung |
+| -- | -- |
 | 1 | Ausführen (x) |
 | 2 | Schreiben (w) |
 | 4 | Lesen (r) |
@@ -16,6 +18,8 @@ find [/path/to/directory] -iname [Datei]
 ```
 
 ### screen - Prozesse in den Hintergrund legen
+| Befehl | Erklärung |
+| -- | -- |
 | ``screen`` | Screen starten |
 | ``screen -list`` | laufende Screen-Session auflisten |
 | ``screen -r <PID>`` | Screen-Session fortsetzen |

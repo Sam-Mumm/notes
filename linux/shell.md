@@ -2,6 +2,8 @@
 Die nachfolgenden Notizen wurden auf der Basis der kornshell erstellt, sollten aber auch mit anderen üblichen Shells wie bash funktionieren
 
 ## besondere Variable
+| Variable | Inhalt |
+| -- | -- |
 | $1 - $9 | übergebene Parameter an das Skript |
 | $0 | Name des Skripts |
 | $? | Rückgabewert (Exit-Code) des Scripts |

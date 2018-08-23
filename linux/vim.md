@@ -1,6 +1,8 @@
 # vim
 
 ## Befehle 
+| Befehl | Erklärung |
+| -- | -- |
 | i | Einfüge Modus |
 | y | Kopieren |
 | p | Einfügen |
