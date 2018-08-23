@@ -7,7 +7,8 @@
 | y | Kopieren |
 | p | Einfügen |
 
-# Optionen
+
+## Optionen
 | Parameter | Erklärung |
 | -- | -- |
 |``set bg=dark``|Umschalten bei dunklen Hintergrund|
