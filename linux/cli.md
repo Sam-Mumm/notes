@@ -10,12 +10,29 @@ chmod [-R] <Rechte> <Datei/Verzeichnis>
 | 2 | Schreiben (w) |
 | 4 | Lesen (r) |
 
+---
+
+### Cronjob
+![](cronjob.png) 
+#### Editieren der Cronjobs (für Benutzer *user*)
+```
+crontab -e [-u <user>]
+```
+
+#### Anzeigen der Cronjobs (für Benutzer *user*)
+```
+crontab -l [-u <user>]
+```
+
+---
 
 ### find - Dateien und Verzeichnisse finden
 #### Nach Dateien mit dem Namen suchen
 ```
 find [/path/to/directory] -iname [Datei]
 ```
+
+---
 
 ### screen - Prozesse in den Hintergrund legen
 | Befehl | Erklärung |
@@ -24,3 +41,5 @@ find [/path/to/directory] -iname [Datei]
 | ``screen -list`` | laufende Screen-Session auflisten |
 | ``screen -r <PID>`` | Screen-Session fortsetzen |
 | [Strg] + a -> [Strg] + d | Screen-Session in den Hintergrund legen |
+
+
