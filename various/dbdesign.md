@@ -12,8 +12,6 @@ Eine Tabelle befindet sich in der 2. Normalform, wenn sie in der 1. Normalform i
 ### Dritte Normalform
 Eine Tabelle befindet sich in der 3. Normalform, wenn sie in der 2. Normalform ist und jedes Nichtschlüsselattribut nicht transitiv abhängig vom Primärschlüssel ist.
 
-### Beispiel
-
 
 ## Anomalien
 Wenn beim Datenbankdesign nicht sichergestellt wird das sich die Datenbank in den drei Normalformen befindet können folgende Anomalien auftreten:
@@ -22,3 +20,11 @@ Wenn beim Datenbankdesign nicht sichergestellt wird das sich die Datenbank in de
  * Einfügen-Anomalie
 
 ## Entity-Relationship-Model
+### Grundelemente
+![](/home/dsteffen/Dokumente/notes/various/grundelemente.png) 
+
+
+### Kardinalitäten
+![](/home/dsteffen/Dokumente/notes/various/kardinalitaet.png) 
+
+### Beispiel

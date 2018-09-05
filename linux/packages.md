@@ -1,5 +1,5 @@
 # Pakete (Auswahl)
-Eine Auswahl an Pakete für Linux
+Eine Auswahl an nützlichen Pakete für Linux
 
 ## Grafische Benutzeroberfläche
 ### Büro
@@ -18,8 +18,9 @@ Eine Auswahl an Pakete für Linux
 ### Zubehör
 |  (Paket-)name | Beschreibung | Link |
 | -- | -- | -- |
-| medit | Texteditor ||
 | keepass2 | Passwort-Manager ||
+| medit | Texteditor ||
+| shutter | Tool für partielle Screenshots ||
 
 ## CLI
 |  (Paket-)name | Beschreibung | Link |

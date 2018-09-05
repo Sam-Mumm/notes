@@ -2,6 +2,9 @@
 Ein paar Notizen rund um SSH
 
 ## Wichtige Dateien
+| Datei | Bedeutung |
+| --- | ---|
+| `~/.ssh/authorized_keys` | öffentliche Schlüssel |
 
 ## Generieren von einem SSH-Schlüsselpaar
 ```
