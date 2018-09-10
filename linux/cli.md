@@ -1,6 +1,6 @@
 # CLI
 
-### chmod - Dateirechte ändern
+#### chmod - Dateirechte ändern
 ```
 chmod [-R] <Rechte> <Datei/Verzeichnis>
 ```
@@ -12,39 +12,53 @@ chmod [-R] <Rechte> <Datei/Verzeichnis>
 
 ---
 
-### Cronjob
+#### Cronjob
 ![](cronjob.png) 
-#### Editieren der Cronjobs (für Benutzer *user*)
+##### Editieren der Cronjobs (für Benutzer *user*)
 ```
 crontab -e [-u <user>]
 ```
 
-#### Anzeigen der Cronjobs (für Benutzer *user*)
+##### Anzeigen der Cronjobs (für Benutzer *user*)
 ```
 crontab -l [-u <user>]
 ```
 
 ---
+#### netstat
+```
+$ netstat <Optionen>
+```
 
-### find - Dateien und Verzeichnisse finden
-#### Nach Dateien mit dem Namen suchen
+|<Optionen>| Erklärung|
+| --- | --- |
+|``t``| |
+|``u``| |
+|``l``| |
+|``p``| |
+|``e``| |
+|``n``| numerische Adressen |
+
+---
+#### find - Dateien und Verzeichnisse finden
+##### Nach Dateien mit dem Namen suchen
 ```
 find [/path/to/directory] -iname [Datei]
 ```
 
 ---
-### PDF-Dateien manipulieren
+#### PDF-Dateien manipulieren
 **benötigtes Paket:** pdftk
 
-#### Zusammenführen
+##### Zusammenführen
 ```
 pdftk <date1.pdf> <date2.pdf> <date3.pdf>  cat output <ausgabe.pdf>
 ```
 
-#### Trennen
+##### Trennen
 
 ---
-### screen - Prozesse in den Hintergrund legen
+#### screen - Prozesse in den Hintergrund legen
 | Befehl | Erklärung |
 | -- | -- |
 | ``screen`` | Screen starten |

@@ -6,7 +6,7 @@ Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder
 ```
 - hosts: <groupname> 
   become: yes
-  become_user: apache
+  become_user: <username>
   vars:
     <variable1>: <value1>
     <variable2>: <value2>
@@ -30,24 +30,31 @@ Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder
 
 ```
 
+## Tasks
+```
+  tasks
+    - name <Beschreibung>
+      <Command>: <Options>
+```
+
 ## Verzeichnisstruktur für Rollen
 ```
 hosts.ini
 playbook.yml
 host_vars
 roles/
-  ├── defaults
-  │     └── main.yml
-  ├── files
-  ├── handlers
-  │     └── main.yml
-  ├── meta
-  │     └── main.yml
-  ├── tasks
-  │     └── main.yml
-  ├── templates
-  └── vars
-        └── main.yml
+  ├─ defaults
+  │     └─ main.yml
+  ├─ files
+  ├─ handlers
+  │     └─ main.yml
+  ├─ meta
+  │     └─ main.yml
+  ├─ tasks
+  │     └─ main.yml
+  ├─ templates
+  └─ vars
+        └─ main.yml
 ```
 
 Erstellen einer Rollen mit: 
@@ -77,7 +84,7 @@ Variablen können definiert werden:
   
 ## Aufruf
 ```
-# Übergeben eines privaten Schlüssels
+# Aufruf
 $ ansible-playbook -i hosts.ini playbook.yml <options>
 ```
 | <Option> | Beschreibung

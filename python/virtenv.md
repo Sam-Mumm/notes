@@ -3,13 +3,16 @@
 ## benötigtes Paket
   * **Debian:** ``virtualenv``
 
-## Einrichten
+## Verwendung
+#### Einrichten
 ```
 mkdir <Directory>
 virtualenv <Directory>
 ```
-
-## Nutzen
+---
+#### Wechsel in die Umgebung
 ```
 source <Directory>/bin/activate
 ```
+---
+#### Verlassen der Umgebung

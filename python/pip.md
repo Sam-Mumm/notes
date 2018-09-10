@@ -1,9 +1,24 @@
 # pip
-## Installieren von Paketen
+
+## Installation
+Zwei Optionen:
+- Über den Paketmanager der Distribution
+- ``curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py``
+
+## Verwendung
+#### Installation
+##### Installieren von einem expliziten Paketen
 ```
-pip install [--proxy=https://user@mydomain:port] <package>
+$ pip install [--proxy=https://user@<proxy>:port] <package>
 ```
 
-## Einlesen von Paketlisten
 
-## Generieren von Paketlisten
+##### Einlesen von Paketlisten
+```
+$ pip install [--proxy=https://user@<proxy>:port] -r requirements.txt
+```
+---
+#### Generieren von Paketlisten
+```
+$ pip freeze -l
+```

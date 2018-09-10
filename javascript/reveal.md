@@ -1,11 +1,15 @@
 # reveal.js
 
 ## Installation
+Die Anleitung geht davon aus das node.js bereits installiert ist
+```
+# Klonen von dem reveal.js-Projekt
+$ git clone https://github.com/hakimel/reveal.js.git
 
-### node.js & benötigte Pakete
-
-### reveal.js
-
+# Nachinstalieren der benötigten Module
+$ cd reveal.js
+$ npm install
+```
 
 ## Grundgerüst
 ```
