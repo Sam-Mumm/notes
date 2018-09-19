@@ -45,7 +45,7 @@ host_vars
 roles/
   ├─ defaults
   │     └─ main.yml
-  ├─ files
+  ├─ files  
   ├─ handlers
   │     └─ main.yml
   ├─ meta
@@ -80,8 +80,14 @@ Variablen können definiert werden:
   * ``{{var.key}}``
   
 #### Filter
+##### Mengen
+| Filter | Ergebnis |
+| --- | --- |
+|``{{ list1 | union(list2) }}`` | liefert die Vereinigung beider Listen |
+|``{{ list1 | difference(list2) }}`` | liefert alle Elemente aus Liste 1 die nicht in Liste 2 sind (list1 ohne list2) |
+|``{{ list1 | intersect(list2) }}`` | liefert die Schnittmenge beider Listen |
+|``{{ list1 | unique }}`` | liefert eine Liste ohne doppelten Werte |
 
-  
 ## Aufruf
 ```
 # Aufruf

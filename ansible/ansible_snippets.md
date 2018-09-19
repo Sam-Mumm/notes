@@ -1,10 +1,9 @@
 # Codeschnipsel
 Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5
 
-## Dateioperationen
-### Template-Task
+## Template-Task
 
-### Copy-Task
+## Copy-Task
 ```
 - hosts: all
   tasks:
@@ -18,6 +17,8 @@ Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5
         backup: yes
 ```
 **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/copy_module.html
+
+-----------------
 
 ### File-Task
 ```
@@ -39,19 +40,42 @@ Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5
 ```
 **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/file_module.html#file-module
 
-## Erweiterte Funktionen
-### Schleifen
-#### with_items
-#### with_lines
+-----------------
 
-### Lookups
-#### Generate Passwords
+## Schleifen
+### with_items
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/plugins/lookup/items.html
+#### Iteration über die Hosts einer Inventory-Gruppe
+**Hosts.ini**
+```
+[web]
+ServerA
+ServerB
+ServerC
+```
 
-#### Dateien
+**sites.yml**
+```
+- hosts: all
+  tasks:
+    - name: Iterate through Hosts in the web Group
+      debug:
+        msg: "Hosts: {{ item }}"
+      with_items: "{{ groups['web'] }}"
+```
 
+### with_lines
 
-## sonstiges
-### Debug
+-----------------
+
+## Lookups
+### Generate Passwords
+
+### Dateien
+
+-----------------
+
+## Debug
 ```
 - hosts: all
   tasks:
