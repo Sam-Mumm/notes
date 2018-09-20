@@ -14,12 +14,12 @@ $ git config --global http.proxy http://user:password@proxy.example.com:8080
 ```
 
 #### Entfernen
-#```
+```
 $ git config --global --unset http.proxy
 ```
 
 ## Stages
-![](/home/dsteffen/Dokumente/notes/various/git.png) 
+![](.//git.png) 
 
 
 ## Cheat Sheet
