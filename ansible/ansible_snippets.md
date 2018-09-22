@@ -1,13 +1,24 @@
 # Codeschnipsel
-Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5
+Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5 und beziehen sich auf ein Inventory-file mit dem folgenden Aufbau:
 
-## Template-Task
+```
+[web]
+ServerA
+ServerB
+ServerC
+```
 
-## Copy-Task
+
+## Datei Operationen
+### Template-Task
+
+-----------------
+
+### Kopieren-Task
 ```
 - hosts: all
   tasks:
-    - name: Copy file foobar to /tmp/helloworld
+    - name: Copy local file foobar to /tmp/helloworld on Remote
       copy:
         src: "foobar"
         dest: /tmp/helloworld
@@ -15,9 +26,15 @@ Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5
         group: root
         mode: 0644
         backup: yes
+    - name: Copy file /tmp/helloworld from remote to /tmp/foobar on local
+      fetch:
+        src: /tmp/helloworld
+        dest: /tmp/foobar
+        flat: yes
 ```
-**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/copy_module.html
-
+**Modul-Dokumentation:**
+- **Copy:** https://docs.ansible.com/ansible/2.5/modules/copy_module.html
+- **Fetch:** https://docs.ansible.com/ansible/2.5/modules/fetch_module.html
 -----------------
 
 ### File-Task
@@ -42,19 +59,11 @@ Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5
 
 -----------------
 
-## Schleifen
-### with_items
+### Schleifen
+#### with_items
 **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/plugins/lookup/items.html
-#### Iteration über die Hosts einer Inventory-Gruppe
-**Hosts.ini**
-```
-[web]
-ServerA
-ServerB
-ServerC
-```
 
-**sites.yml**
+##### **Iteration über die Hosts einer Inventory-Gruppe**
 ```
 - hosts: all
   tasks:
@@ -71,7 +80,7 @@ ServerC
 ## Lookups
 ### Generate Passwords
 
-### Dateien
+### CSV-Dateien
 
 -----------------
 
