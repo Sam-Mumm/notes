@@ -80,14 +80,15 @@ Variablen können definiert werden:
   * ``{{var.key}}``
   
 #### Filter
-##### lookup
+##### **lookup**
 | Filter | Ergebnis |
 | --- | --- |
+|<code>{{ lookup('password', '/tmp/passwordfile length=20 chars=ascii_letters,digits') }}</code>| Generieren von einem Passwort |
 |<code>{{ lookup('env','HOME') }}</code>| Abfragen einer Umgebungsvariable |
 |<code>{{ lookup('template', './template.tmpl.j2') }}</code>| Parsen einer Templatedatei |
 
 
-##### Mengen
+##### **Mengen**
 | Filter | Ergebnis |
 | --- | ---
 | <code> {{ list1 \| union(list2) }} </code> | liefert die Vereinigung beider Listen |
