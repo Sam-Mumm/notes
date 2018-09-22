@@ -15,7 +15,7 @@ Aber hier eine Auswahl der Befehle die man regelmäßig benötigt
 |Optionen|Kekse|
 |---|---|
 | `cp <src>` <dest> | Kopieren einer Datein in oder aus einem Container, der Container wird hierbei referenziert mittels ``<Image_ID>:<path/to/file>`` |
-| `exec -it <Image-ID|Name> <Command>` | Ausführen von ``<Command>`` in einem laufenden Container |
+| <code>exec -it <Image-ID\|Name> <Command></code> | Ausführen von ``<Command>`` in einem laufenden Container |
 | `pull <Name>` | Herunterladen von einem Image |
 | `ps [-a]` | Anzeigen (aller) der laufenden Container |
 | `rm <Container-ID|Name>` | Löschen von einem Image |
