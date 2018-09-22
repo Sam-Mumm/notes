@@ -59,11 +59,10 @@ ServerC
 
 -----------------
 
-### Schleifen
-#### with_items
+## Schleifen
+### with_items
 **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/plugins/lookup/items.html
 
-##### **Iteration über die Hosts einer Inventory-Gruppe**
 ```
 - hosts: all
   tasks:
