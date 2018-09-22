@@ -80,6 +80,13 @@ Variablen können definiert werden:
   * ``{{var.key}}``
   
 #### Filter
+##### lookup
+| Filter | Ergebnis |
+| --- | --- |
+|<code>{{ lookup('env','HOME') }}</code>| Abfragen einer Umgebungsvariable |
+|<code>{{ lookup('template', './template.tmpl.j2') }}</code>| Parsen einer Templatedatei |
+
+
 ##### Mengen
 | Filter | Ergebnis |
 | --- | ---
