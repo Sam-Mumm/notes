@@ -80,13 +80,21 @@ Variablen können definiert werden:
   * ``{{var.key}}``
   
 #### Filter
-##### Mengen
+##### **lookup**
 | Filter | Ergebnis |
 | --- | --- |
-|``{{ list1 | union(list2) }}`` | liefert die Vereinigung beider Listen |
-|``{{ list1 | difference(list2) }}`` | liefert alle Elemente aus Liste 1 die nicht in Liste 2 sind (list1 ohne list2) |
-|``{{ list1 | intersect(list2) }}`` | liefert die Schnittmenge beider Listen |
-|``{{ list1 | unique }}`` | liefert eine Liste ohne doppelten Werte |
+|<code>{{ lookup('password', '/tmp/passwordfile length=20 chars=ascii_letters,digits') }}</code>| Generieren von einem Passwort |
+|<code>{{ lookup('env','HOME') }}</code>| Abfragen einer Umgebungsvariable |
+|<code>{{ lookup('template', './template.tmpl.j2') }}</code>| Parsen einer Templatedatei |
+
+
+##### **Mengen**
+| Filter | Ergebnis |
+| --- | ---
+| <code> {{ list1 \| union(list2) }} </code> | liefert die Vereinigung beider Listen |
+| <code> {{ list1 \| difference(list2) }}  </code> | liefert alle Elemente aus Liste 1 die nicht in Liste 2 sind (list1 ohne list2) |
+| <code> {{ list1 \| intersect(list2) }}  </code> | liefert die Schnittmenge beider Listen |
+| <code> {{ list1 \| unique }} </code> | liefert eine Liste ohne doppelten Werte |
 
 ## Aufruf
 ```
