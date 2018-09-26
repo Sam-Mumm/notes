@@ -7,6 +7,9 @@ Die ``ansible.cfg`` kann über die folgenden Wege definiert werden
   - als Datei im Projektverzeichnis
   - als Umgebungsvariable: ANSIBLE_CONFIG
 
+## Dokumentation
+Eine vollständige Liste aller Parameter für die ansible.cfg ist in der [Dokumentation](https://docs.ansible.com/ansible/2.4/intro_configuration.html) zu finden
+
 ## Beispiel
 ```
 [defaults]
