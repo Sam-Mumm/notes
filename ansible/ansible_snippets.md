@@ -1,5 +1,5 @@
 # Codeschnipsel
-Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5 und beziehen sich auf ein Inventory-file mit dem folgenden Aufbau:
+Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5 und beziehen sich auf ein Inventoryfile mit diesem Inhalt:
 
 ```
 [web]
