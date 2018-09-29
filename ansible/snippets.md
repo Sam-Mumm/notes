@@ -6,17 +6,26 @@ Alle nachfolgenden Codefragmente basieren auf ansible in der Version 2.5 und bez
 ServerA
 ServerB
 ServerC
+
+[logserver]
+ServerD
 ```
 
 
 ## Datei Operationen
 ### Template-Task
 
------------------
 
-### Kopieren-Task
+-----------------
+### Kopieren von Dateien
+**Datei:** group_vars/all.yml
 ```
-- hosts: all
+content: ""
+```
+
+**Playbook**
+```
+- hosts: ServerA
   tasks:
     - name: Copy local file foobar to /tmp/helloworld on Remote
       copy:
@@ -26,15 +35,33 @@ ServerC
         group: root
         mode: 0644
         backup: yes
+        
     - name: Copy file /tmp/helloworld from remote to /tmp/foobar on local
       fetch:
         src: /tmp/helloworld
         dest: /tmp/foobar
         flat: yes
+        
+    - name: Get Content of file /tmp/barfoo
+       slurp:
+         src: "/tmp/barfoo"
+       register: tmp
+    - name: store variable to content
+      set_fact:
+        content: "{{tmp.content}}"  
+
+
+- hosts: ServerB
+  tasks:
+    - name: Create file /tmp/helloworld with content of /tmp/barfoo
+      copy:
+        dest: /tmp/helloworld
+        content: "{{content}}"                 
 ```
 **Modul-Dokumentation:**
 - **Copy:** https://docs.ansible.com/ansible/2.5/modules/copy_module.html
 - **Fetch:** https://docs.ansible.com/ansible/2.5/modules/fetch_module.html
+- **slurp:** https://docs.ansible.com/ansible/2.5/modules/slurp_module.html
 -----------------
 
 ### File-Task
