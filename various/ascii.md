@@ -1,2 +1,2 @@
 # ASCII
-![ASCII](ascii.png)
+![./ascii.png](./ascii.png)
