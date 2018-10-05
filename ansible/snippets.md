@@ -14,9 +14,27 @@ ServerD
 
 ## Datei Operationen
 ### Template-Task
+```
+- hosts: all
+  tasks:
+    - name: Copy template to the home-directory of the user
+      template:
+        src: "index.html.j2"
+        dest: "/var/www/html/index.html"
+        owner: apache
+        group: user
+        mode: '0644'
+```
 
+ - **Modul-Dokumentation:**	  https://docs.ansible.com/ansible/2.5/modules/template_module.html
+
+ - **Notizen:**
+     - Dateien die als Templates genutzt werden, sollten auf "*.j2" enden
+     - In Rollen werden Templates im Ordner <code>templates</code> gesucht
+     - Templates werden per jinja2 geparst
 
 -----------------
+
 ### Kopieren von Dateien
 **Datei:** group_vars/all.yml
 ```
@@ -127,12 +145,31 @@ content: ""
 
 -----------------
 
-## Debug
+## sonstige Module
+### Variable überprüfen
 ```
 - hosts: all
+  tasks:
+    - name: Verify the values of variables
+      assert:
+        that:
+          - "port >= 1"
+          - "port <= 65535"
+      msg: "Variable port must be between 1 and 65535"
+```
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/assert_module.html
+
+### Debug
+```
+- hosts: all
+  vars:
+    - answer: 42
   tasks:
     - name: Display Hello World
       debug:
         msg: "Hello World"
+    - name: Display the content of variable answer
+      debug:
+        var: answer
 ```
 **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/debug_module.html
