@@ -18,9 +18,23 @@ ServerD
 - hosts: all
   tasks:
     - name: Copy template to the home-directory of the user
+      template:
+        src: "index.html.j2"
+        dest: "/var/www/html/index.html"
+        owner: apache
+        group: user
+        mode: '0644'
 ```
 
+ - **Modul-Dokumentation:**	  https://docs.ansible.com/ansible/2.5/modules/template_module.html
+
+ - **Notizen:**
+     - Dateien die als Templates genutzt werden, sollten auf "*.j2" enden
+     - In Rollen werden Templates im Ordner <code>templates</code> gesucht
+     - Templates werden per jinja2 geparst
+
 -----------------
+
 ### Kopieren von Dateien
 **Datei:** group_vars/all.yml
 ```
