@@ -1,6 +1,16 @@
 # Init-Prozess unter Linux
 ## SysVinit
-### Runlevel
+### Runlevel bei Linux
+
+| Runlevel | Beschreibung |
+| --- | --- |
+| 0 | Shutdown |
+| 1 | Einzelnutzerbetrieb ohne Netzwerk |
+| 2 | lokaler Mehrbenutzerbetrieb ohne Netzwerk |
+| 3 | Netzwerk steht zur Verfügung, **ohne** GUI |
+| 4 | nicht definiert |
+| 5 | Netzwerk steht zur Verfügung, **mit** GUI |
+| 6 | Reboot |
 
 ### minimales Bootscript
 ```
