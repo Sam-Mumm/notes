@@ -9,3 +9,4 @@
 | 443 | HTTPS |
 | 636 | LDAPS |
 | 995 | POP3S |
+| 3306 | MySQL |
