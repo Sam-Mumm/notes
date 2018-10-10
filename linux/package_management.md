@@ -1,6 +1,7 @@
 # Paketverwaltung
 
 ## Verwaltung von Software (Paketen)
+
 | Aufgabe | apt | yum | zypp(er) | pacman |
 | -- | -- | -- | --| -- | -- |
 | Installation von einem Paket aus einem Repository | ``apt-get install <Package>`` | ``yum install <Package>`` | ``zypper install <Package>`` | ``pacman -S <Package>`` |
