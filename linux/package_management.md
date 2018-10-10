@@ -3,7 +3,7 @@
 ## Verwaltung von Software (Paketen)
 
 | Aufgabe | apt | yum | zypp(er) | pacman |
-| -- | -- | -- | --| -- | -- |
+| -- | -- | -- | --| -- |
 | Installation von einem Paket aus einem Repository | ``apt-get install <Package>`` | ``yum install <Package>`` | ``zypper install <Package>`` | ``pacman -S <Package>`` |
 | Installation von einem lokalen Paket | ``dpkg -i <Package>`` | ``ỳum localinstall <Package>`` | ``zypper install <Package>`` | ``pacman -U <Package>`` |
 | Update von einem bereits installierten Paket | ``apt-get install <Package>`` | ``yum update <Package>`` | ``zypper update -t package <Package>`` | ``pacman -S <Package>`` |
