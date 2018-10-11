@@ -45,3 +45,20 @@ esac
 ```
 
 ## systemd
+```
+[Unit]
+Description=Description of the tool
+After=network.target network-online.target mysql.service
+Wants=network-online.target
+
+[Service]
+ExecStart=/path/to/dir/to/start/the/app
+ExecStop=/path/to/dir/to/stop/the/app
+ExecReload=/path/to/dir/to/restart/the/app
+PIDFile=/path/to/pid/file
+Type=forking
+User=user
+
+[Install]
+WantedBy=multi-user.target
+```
