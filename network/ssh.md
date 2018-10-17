@@ -8,7 +8,7 @@ Ein paar Notizen rund um SSH
 
 ## Generieren von einem SSH-Schlüsselpaar
 ```
-$ ssh-keygen -t rsa -b <keysize>
+$ ssh-keygen -t rsa -b <keysize> -N <passwort> -f /path/to/dir/id_rsa
 ```
 
 ## Kopieren von einem Schlüssel
