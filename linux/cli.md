@@ -25,6 +25,14 @@ crontab -l [-u <user>]
 ```
 
 ---
+
+#### diff
+##### Vergleich von zwei Verzeichnissen
+```
+diff -i -r --brief /path/to/dir1 /path/to/dir2
+```
+
+---
 #### netstat
 ```
 $ netstat <Optionen>
