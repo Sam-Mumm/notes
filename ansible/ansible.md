@@ -2,6 +2,13 @@
 
 Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder Korrektheit
 
+## Inventory
+```
+[groupname]
+<hostname>
+<fqdn> <variable1>=<value1> <variable2>=<value2>
+```
+
 ## Grundgerüst für Playbooks
 ```
 - hosts: <groupname> 
@@ -37,6 +44,13 @@ Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder
       <Command>: <Options>
 ```
 
+## Tags
+
+### besondere Tags
+Einige Tags besitzen besondere Eigenschaften:
+* **always:** Die Tasks werden immer ausgeführt und können per <code>--skip-tags \<tagname></code> übersprungen werden
+* **never:** Die Tasks werden nur ausgeführt wenn sie per <code>--tags \<tagname></code> explizit genannt werden
+
 ## Verzeichnisstruktur für Rollen
 ```
 hosts.ini
@@ -60,13 +74,6 @@ roles/
 Erstellen einer Rollen mit: 
 ```
   $ ansible-galaxy init <rollenname>
-```
-
-## Inventory
-```
-[groupname]
-<hostname>
-<fqdn> <variable1>=<value1> <variable2>=<value2>
 ```
 
 ## Variablen
@@ -105,8 +112,9 @@ $ ansible-playbook -i hosts.ini playbook.yml <options>
 | --- | ---
 | ``--private-key=/path/to/ssh/private/key`` | Privaten SSH-Key übergeben |
 | ``--ask-pass`` | Fragen nachdem User-Passwort
-| ``--ask-becom-pass`` | Frage nach dem sudo-Passwort |
+| ``--ask-become-pass`` | Frage nach dem sudo-Passwort |
 | ``--ask-vault-pass`` | Frage nach dem vault-Passwort |
 | ``--vault-password-file=/path/to/password/file`` | Pfad zur Passwort-Datei (Passwort im Klartext | 
 | ``--become-user <Username>`` | Definieren zu welchem Benutzer gewechselt werden soll |
 | ``--extra-vars "version=42"`` | Übergeben von Variablen |
+| ``--tags <tag1> <tag2> <tag3> ... `` | Ausführen der T
