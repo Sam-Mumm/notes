@@ -25,7 +25,7 @@ Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder
   tasks:
     - <task_1>
       <task_2>
-      include: tasks.yaml
+      include_task: tasks.yaml
       ...
   post_tasks:
     - <task_1>
@@ -34,19 +34,24 @@ Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder
   roles:
     - common
     - { role: common, when: month=may }
-
+    - role: common
+      tags: ['never', 'common']
 ```
 
-## Tasks
+### Struktur eines Tasks
 ```
   tasks
     - name <Beschreibung>
       <Command>: <Options>
+      tags: ['<tag1>', '<tag2>', ...]
 ```
 
 ## Tags
+Mit Label makiert werden können:
+* Tasks
+* Rollen
+* include_tasks
 
-### besondere Tags
 Einige Tags besitzen besondere Eigenschaften:
 * **always:** Die Tasks werden immer ausgeführt und können per <code>--skip-tags \<tagname></code> übersprungen werden
 * **never:** Die Tasks werden nur ausgeführt wenn sie per <code>--tags \<tagname></code> explizit genannt werden
@@ -117,4 +122,5 @@ $ ansible-playbook -i hosts.ini playbook.yml <options>
 | ``--vault-password-file=/path/to/password/file`` | Pfad zur Passwort-Datei (Passwort im Klartext | 
 | ``--become-user <Username>`` | Definieren zu welchem Benutzer gewechselt werden soll |
 | ``--extra-vars "version=42"`` | Übergeben von Variablen |
-| ``--tags <tag1> <tag2> <tag3> ... `` | Ausführen der T
+| ``--tags <tag1> <tag2> <tag3> ... `` | Ausführen der Tasks die mit den übergebenen Tags gelabeled sind |
+| ``--skip-tags <tag1> <tag2> <tag3> ... `` | Überspringen der Tasks die mit den übergebenen Tags gelabeld sind |
