@@ -1,4 +1,4 @@
-# Passwortlose Anmeldung
+# MySQL - Passwortlose Anmeldung
 
 Um für einen Benutzer die passwortlose Anmeldung an MySQL zu ermöglichen muss eine Datei mit dem Namen ``~/.my.cnf`` im Home-Verzeichnis des Benutzers erstellt werden.
 

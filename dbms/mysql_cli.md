@@ -1,4 +1,4 @@
-# MySQL-CLI-Befehle
+# MySQL - Command Line Interface
 
 ## Anlegen von einem Benutzer / Setzen der Rechte für einen Benutzer
 ```
