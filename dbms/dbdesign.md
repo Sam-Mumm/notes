@@ -21,10 +21,10 @@ Wenn beim Datenbankdesign nicht sichergestellt wird das sich die Datenbank in de
 
 ## Entity-Relationship-Model
 ### Grundelemente
-![](/home/dsteffen/Dokumente/notes/various/grundelemente.png) 
+![](grundelemente.png) 
 
 
 ### Kardinalitäten
-![](/home/dsteffen/Dokumente/notes/various/kardinalitaet.png) 
+![](kardinalitaet.png) 
 
 ### Beispiel
