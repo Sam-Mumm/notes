@@ -143,6 +143,24 @@ content: ""
 
 ### CSV-Dateien
 
+
+### HashiCorp Vault
+**Voraussetzung: ** Setzt das Python-Modul **hvac** voraus
+```
+- hosts: localhost
+  vars:
+    path_to_secret: "secret/message:value"
+    vault_token: "2mDlFNUawn7tDGiTP7hTPCSP"
+    vault_server: "https://vaultserver.example.com:8200"
+    cacert_path: "/etc/vault/fullchain.pem"
+    password: "{{ lookup('hashi_vault', 'secret={{ path_to_secret }} token={{ vault_token }} url={{ vault_server }} cacert={{ cacert_path }}') }}"
+  tasks:
+    - name: Output Password
+      debug:
+        msg: "{{password}}"
+```
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/plugins/lookup/hashi_vault.html
+
 -----------------
 
 ## Linux
