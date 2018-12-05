@@ -1,4 +1,4 @@
-# Ansible - Cheat Sheet
+# Ansible
 
 Eine lose Sammlung an Codefragmenten ohne Anspruch auf vollständigkeit und/oder Korrektheit
 
@@ -82,10 +82,36 @@ Erstellen einer Rollen mit:
 ```
 
 ## Variablen
+#### Orte
 Variablen können definiert werden:
   * im Playbook (Schlüsselwort vars:)
   * in der Datei: ``/host_vars/<hostname>.yaml`` für eine Host
   * in der Datei  ``/host_vars/<groupname>.yaml`` für alle Mitglieder der Gruppe <groupname> im Inventory
+
+#### Datentypen
+##### Variable
+```
+
+```
+
+##### List
+```
+user:
+  - Alice
+  - Bob
+  - Trudy
+```
+
+##### Dictionary  
+```
+
+```
+
+##### geschachtelte Variablen
+```
+
+```
+
 
 #### Zugriff
   * ``{{var}}``
