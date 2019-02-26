@@ -46,16 +46,15 @@
 ```
 
  - **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/command_module.html
- - **Notizen: ** Aber ansible 2.6 ist es möglich Befehle mit Parametern auch als Liste zu übergeben:
+ - **Notizen:** Ab ansible 2.6 ist es möglich Befehle mit Parametern auch als Liste zu übergeben:
    ```
-   - name: Change working dir to /opt/app/init and execute make_db.sh only if /opt/app/db not exists
+   - name: Change working dir to /tmp and create the file foo 
      command:
      args:
        chdir: /tmp
        argv:
          - touch
          - foo
-         - bar
    ```
 ---------------------------
 
