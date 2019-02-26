@@ -25,4 +25,38 @@
 
 ---------------------------
 
+# Shell-Befehle
+
+```
+- hosts: all
+  tasks:
+   - name: get kernel version
+     command: uname -r
+     register: kernel_version
+
+   - name: output kernel version
+     debug:
+       msg: "On the target kernel {{kernel_version.stdout}} is running"
+
+   - name: Change working dir to /opt/app/init and execute make_db.sh only if /opt/app/db not exists
+     command: init/make_db.sh
+     args:
+       chdir: /opt/app
+       creates: /opt/app/database
+```
+
+ - **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/command_module.html
+ - **Notizen: ** Aber ansible 2.6 ist es möglich Befehle mit Parametern auch als Liste zu übergeben:
+   ```
+   - name: Change working dir to /opt/app/init and execute make_db.sh only if /opt/app/db not exists
+     command:
+     args:
+       chdir: /tmp
+       argv:
+         - touch
+         - foo
+         - bar
+   ```
+---------------------------
+
 ## Startscripte
