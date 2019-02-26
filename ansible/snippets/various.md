@@ -28,3 +28,47 @@
         var: answer
 ```
 **Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/debug_module.html
+
+----------------------------
+
+## Dialoge
+```
+- hosts: all
+  tasks:
+    - name: Paused the playbook
+      pause:
+        prompt: "Bitte druecken sie eine beliebige Taste zum fortfahren"
+
+    - name: Get new username
+      pause:
+        prompt: "Bitten geben sie den neuen Benutzernamen ein:"
+      register: username
+
+    - name: Get init user password
+      pause:
+        prompt: "Bitte geben Sie das initiale Passwort ein:"
+        echo: no
+      register: init_pwd
+      no_log: true
+```
+
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/pause_module.html
+
+----------------------------
+
+## Webservices
+```
+- hosts: all
+  tasks:
+    - name: Configure SMTP-mailserver
+      uri:
+        url: http://app.example.com/api/settings
+        method: POST
+        body: "mail=mail.example.com&port=25"
+        user: "admin"
+        password: "admin.123"
+        status_code: 204
+        force_basic_auth: yes
+```
+**Modul-Dokumentation:** https://docs.ansible.com/ansible/2.5/modules/uri_module.html
+
