@@ -33,6 +33,14 @@ diff -i -r --brief /path/to/dir1 /path/to/dir2
 ```
 
 ---
+
+#### Mail versand
+```
+echo "content" | mailx -s "Subject" -r sender@example.com recipient1@example.com[,recipient2@example.com] 
+```
+
+---
+
 #### netstat
 ```
 $ netstat <Optionen>
