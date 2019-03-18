@@ -8,22 +8,27 @@ Zwei Optionen:
 ## Verwendung
 Neben den unten angeführten Beispielen, kann in Python 3 auch die Syntax:
 ```
-$ python3 -m pip install <command>
+$ python3 -m pip <command> <parameter>
 ```
-verwendet werden
+verwendet werden.
 
-#### Installation
-##### Installieren von einem expliziten Paketen
+### Installation
+#### Installieren aus den offiziellen Paketquellen
 ```
 $ pip install [--proxy=https://user@<proxy>:port] <package>
 ```
 
-##### Einlesen von Paketlisten
+#### Einlesen von Paketlisten
 ```
 $ pip install [--proxy=https://user@<proxy>:port] -r requirements.txt
 ```
----
-#### Generieren von Paketlisten
+
+#### Installation aus einer eigenen Paketquelle
+```
+$ pip install [--proxy=https://user@<proxy>:port] --index-url https://test.pypi.org/simple/
+```
+
+### Generieren von Paketlisten
 ```
 $ pip freeze -l
 ```
