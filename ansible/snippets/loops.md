@@ -5,10 +5,10 @@
 ```
 - hosts: all
   vars:
-    - server:
-        - webserver
-        - database
-        - ldap
+    server:
+      - webserver
+      - database
+      - ldap
   tasks:
     - name: Iterate through Variable/Inventory
       debug:
