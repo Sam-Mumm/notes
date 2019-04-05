@@ -91,10 +91,11 @@ Variablen können definiert werden:
 #### Datentypen
 ##### Variable
 ```
-
+answer: 42
+hello: "good bye"
 ```
 
-##### List
+##### Liste
 ```
 user:
   - Alice
@@ -104,7 +105,10 @@ user:
 
 ##### Dictionary  
 ```
-
+interface:
+  ip: "192.168.1.1"
+  netmask: "255.255.255.o"
+  gateway: "192.168.1.0"
 ```
 
 ##### geschachtelte Variablen
@@ -114,8 +118,10 @@ user:
 
 
 #### Zugriff
-  * ``{{var}}``
-  * ``{{var.key}}``
+Die elementaren Zugriffsarten sind:
+  * **Variable:** <code>{{var}}</code>
+  * **Liste:** <code>{{var[0]}}</code>
+  * **Dictionary:** <code>{{var.key}}</code>
   
 #### Filter
 ##### **lookup**
@@ -124,6 +130,7 @@ user:
 |<code>{{ lookup('password', '/tmp/passwordfile length=20 chars=ascii_letters,digits') }}</code>| Generieren von einem Passwort |
 |<code>{{ lookup('env','HOME') }}</code>| Abfragen einer Umgebungsvariable |
 |<code>{{ lookup('template', './template.tmpl.j2') }}</code>| Parsen einer Templatedatei |
+|<code>{{ lookup('url', 'http://example.com/index.html') }}</code>| Laden des Inhalts von einem Dokument per HTTP-Anfrage |
 
 
 ##### **Mengen**

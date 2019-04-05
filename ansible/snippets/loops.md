@@ -5,29 +5,24 @@
 ```
 - hosts: all
   vars:
-    - liste
-        - Aa
-        - Bb
-        - Cc
-    - users:
-        - { name: 'jdoe', group: 'ssh' }
-        - { name: 'pmustermann', group: 'user' }
+    - server:
+        - webserver
+        - database
+        - ldap
   tasks:
     - name: Iterate through Variable/Inventory
       debug:
-        msg: "Hosts: {{ item }}"
-      with_items: "{{ groups['web'] }}"
-    - name: Iterate through list of single Elements
-      debug:
-        msg: "{{item}}"
-      with_items: "{{liste}}"
-    - name: Iterate through list of dictionaries
-      debug:
-        msg: "{{item.name}} in Group {{item.group}}"
-      with_items: "{{liste}}"
-
+        msg: "Server: {{ function }}"
+      with_items: "{{ server }}"
+      loop_control:
+        loop_var: function
 ```
 
 --------------------------
 
 ## with_lines
+
+
+--------------------------
+
+## with_dict
