@@ -11,6 +11,13 @@
         - { name: 'jdoe', group: 'ssh' }
         - { name: 'pmustermann', group: 'user' }
       usernames: []
+      server:
+        webserver:
+          os: Debian
+          ip: 192.168.1.1
+        database:
+          os: CentOS
+          ip: 192.168.1.2
   tasks:
     - name: Add string to list
       set_fact:
@@ -27,4 +34,9 @@
     - name: Covert the Values of the key name to a list
       set_fact:
         usernames: "{{ users | map(attribute='name')|list}}"
+
+    - name: Add dictionary to a list of dictionary
+      set_fact:
+        server: "{{ server | combine( {'ldap': { 'os': 'SuSE', 'ip': '192.168.1.4' }} ) }}"
+
 ```
