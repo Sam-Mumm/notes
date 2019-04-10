@@ -82,20 +82,20 @@ Erstellen einer Rollen mit:
 ```
 
 ## Variablen
-#### Orte
+### Orte
 Variablen können definiert werden:
   * im Playbook (Schlüsselwort vars:)
   * in der Datei: ``/host_vars/<hostname>.yaml`` für eine Host
   * in der Datei  ``/host_vars/<groupname>.yaml`` für alle Mitglieder der Gruppe <groupname> im Inventory
 
-#### Datentypen
-##### Variable
+### Datentypen
+#### Variable
 ```
 answer: 42
 hello: "good bye"
 ```
 
-##### Liste
+#### Liste
 ```
 user:
   - Alice
@@ -103,7 +103,7 @@ user:
   - Trudy
 ```
 
-##### Dictionary  
+#### Dictionary  
 ```
 interface:
   ip: "192.168.1.1"
@@ -111,20 +111,20 @@ interface:
   gateway: "192.168.1.0"
 ```
 
-##### geschachtelte Variablen
+#### geschachtelte Variablen
 ```
 
 ```
 
 
-#### Zugriff
+### Zugriff
 Die elementaren Zugriffsarten sind:
   * **Variable:** <code>{{var}}</code>
   * **Liste:** <code>{{var[0]}}</code>
   * **Dictionary:** <code>{{var.key}}</code>
   
-#### Filter
-##### **lookup**
+### Filter
+#### **lookup**
 | Filter | Ergebnis |
 | --- | --- |
 |<code>{{ lookup('password', '/tmp/passwordfile length=20 chars=ascii_letters,digits') }}</code>| Generieren von einem Passwort |
@@ -133,13 +133,40 @@ Die elementaren Zugriffsarten sind:
 |<code>{{ lookup('url', 'http://example.com/index.html') }}</code>| Laden des Inhalts von einem Dokument per HTTP-Anfrage |
 
 
-##### **Mengen**
+#### **Mengen**
 | Filter | Ergebnis |
 | --- | ---
 | <code> {{ list1 \| union(list2) }} </code> | liefert die Vereinigung beider Listen |
 | <code> {{ list1 \| difference(list2) }}  </code> | liefert alle Elemente aus Liste 1 die nicht in Liste 2 sind (list1 ohne list2) |
 | <code> {{ list1 \| intersect(list2) }}  </code> | liefert die Schnittmenge beider Listen |
 | <code> {{ list1 \| unique }} </code> | liefert eine Liste ohne doppelten Werte |
+
+### Rangordnung
+(von niedrigster zur höchsten Priorität) 
+
+1. extra vars (always win precedence)
+2. include params
+3. role (and include_role) params
+4. set_facts / registered vars
+5. include_vars
+6. task vars (only for the task)
+7. block vars (only for tasks in block)
+8. role vars (defined in role/vars/main.yml)
+9. play vars_files
+10. play vars_prompt
+11. play vars
+12. host facts / cached set_facts
+13. playbook host_vars/*
+14. inventory host_vars/*
+15. inventory file or script host vars
+16. playbook group_vars/*
+17. inventory group_vars/*
+18. playbook group_vars/all
+19. inventory group_vars/all
+20. inventory file or script group vars
+21. role defaults
+22. command line values (eg “-u user”)
+
 
 ## Aufruf
 ```
