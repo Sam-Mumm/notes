@@ -141,6 +141,13 @@ Die elementaren Zugriffsarten sind:
 | <code> {{ list1 \| intersect(list2) }}  </code> | liefert die Schnittmenge beider Listen |
 | <code> {{ list1 \| unique }} </code> | liefert eine Liste ohne doppelten Werte |
 
+
+### Implizite Variable
+| Variable | Beschreibung |
+| groups | Dictionary aller Inventory-Gruppen (einschließlich der Hosts) |
+| hostsvars | Hostvariablen aller Inventory Hosts (einschließlich der facts) |
+
+
 ### Rangordnung
 (von niedrigster zur höchsten Priorität) 
 
@@ -176,11 +183,11 @@ $ ansible-playbook -i hosts.ini playbook.yml <options>
 | <Option> | Beschreibung
 | --- | ---
 | ``--private-key=/path/to/ssh/private/key`` | Privaten SSH-Key übergeben |
-| ``--ask-pass`` | Fragen nachdem User-Passwort
+| ``--ask-pass`` | Fragen nachdem User-Passwort | 
 | ``--ask-become-pass`` | Frage nach dem sudo-Passwort |
 | ``--ask-vault-pass`` | Frage nach dem vault-Passwort |
 | ``--vault-password-file=/path/to/password/file`` | Pfad zur Passwort-Datei (Passwort im Klartext | 
 | ``--become-user <Username>`` | Definieren zu welchem Benutzer gewechselt werden soll |
-| ``--extra-vars "version=42"`` | Übergeben von Variablen |
-| ``--tags <tag1> <tag2> <tag3> ... `` | Ausführen der Tasks die mit den übergebenen Tags gelabeled sind |
+| ``--extra-vars "<variable_1>=<wert_1> <variable_2>=<wert_2> ... <variable_n>=<wert_n>"`` | Übergeben von Variablen |
+| ``--tags <tag1> <tag2> <tag3> ... `` | Ausführen der Tasks die mit den übergebenen Tags markiert sind |
 | ``--skip-tags <tag1> <tag2> <tag3> ... `` | Überspringen der Tasks die mit den übergebenen Tags gelabeld sind |
