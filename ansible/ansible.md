@@ -144,6 +144,7 @@ Die elementaren Zugriffsarten sind:
 
 ### Implizite Variable
 | Variable | Beschreibung |
+| --- | --- |
 | groups | Dictionary aller Inventory-Gruppen (einschließlich der Hosts) |
 | hostsvars | Hostvariablen aller Inventory Hosts (einschließlich der facts) |
 
