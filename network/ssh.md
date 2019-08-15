@@ -16,8 +16,9 @@ $ ssh-keygen -t rsa -b <keysize> -N <passwort> -f /path/to/dir/id_rsa
 $ ssh-copy-id -i path/to/public/key user@host
 ```
 
-## Konfigurationsdatei
-**Datei:**/home/<Benutzer>/.ssh/config
+## hostspezifische Keys
+**Datei:** `/home/<Benutzer>/.ssh/config`
+
 ```
 Host <Hostname>.example.com
   User <Remote-Benutzer>
