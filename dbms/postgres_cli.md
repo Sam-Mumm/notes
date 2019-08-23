@@ -9,7 +9,7 @@ psql
 
 ### Als nicht-privilegierter Benutzer
 ```
-psql -U <Benutzer> -h <ocalhost|IP|Hostname> <Datenbankname>
+psql -U <Benutzer> -h <localhost|IP|Hostname> <Datenbankname>
 ```
 
 ### Navigation in der Datenbank
