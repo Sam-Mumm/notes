@@ -10,3 +10,4 @@
 | 636 | LDAPS |
 | 995 | POP3S |
 | 3306 | MySQL |
+| 5432 | PostgreSQL |
