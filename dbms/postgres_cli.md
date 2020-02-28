@@ -36,3 +36,10 @@ $ PGPASSWORD = '*********' && psql -h <host> -U <User> <Database> < /path/to/dum
 ```
 $ PGPASSWORD = '*********' && pg_dump --no-owner -h <host> -U <User> <Database> > /path/to/dump/file.sql 
 ```
+
+## Passwortloser Login
+**Datei:** ~/.pgpasss
+```
+<Host>:<Port>:<Database>:<User>:<Password>
+localhost:5432:mydatabase:jdoe:geheim!
+```
