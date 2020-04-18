@@ -33,11 +33,11 @@ curl <parameter> <URL>
 
 |<Optionen>| Erklärung|
 | --- | --- |
-| -u<User>:<Password> | Benutzer und Passwort für die Authentifikation |
-| -X <POST|GET> | Typ des Requests |
-| -H <Header> | Zu übertragender Header |
-| -d<Payload> | Zu übertragende Daten (@<path/to/file> für Dateien) |
-| -n | Nutzung der `.netrc` für die Authentifikation (wird im Home-Verzeichnis vom Benutzer gesucht) |
+| `-u<User>:<Password>` | Benutzer und Passwort für die Authentifikation |
+| `-X <POST|GET>` | Typ des Requests |
+| `-H <Header>` | Zu übertragender Header |
+| `-d<Payload>` | Zu übertragende Daten (@<path/to/file> für Dateien) |
+| `-n` | Nutzung der `.netrc` für die Authentifikation (wird im Home-Verzeichnis vom Benutzer gesucht) |
 
 ##### Aufbau .netrc
 ```
@@ -68,12 +68,12 @@ $ netstat <Optionen>
 
 |<Optionen>| Erklärung|
 | --- | --- |
-|``t``| |
-|``u``| |
-|``l``| |
-|``p``| |
-|``e``| |
-|``n``| numerische Adressen |
+|`t`| |
+|`u`| |
+|`l`| |
+|`p`| |
+|`e`| |
+|`n`| numerische Adressen |
 
 ---
 #### find - Dateien und Verzeichnisse finden
