@@ -34,7 +34,7 @@ curl <parameter> <URL>
 |<Optionen>| Erklärung|
 | --- | --- |
 | `-u<User>:<Password>` | Benutzer und Passwort für die Authentifikation |
-| `-X <POST|GET>` | Typ des Requests |
+| `-X <Type>` | Typ des Requests (gültige Werte: POST, GET...) |
 | `-H <Header>` | Zu übertragender Header |
 | `-d<Payload>` | Zu übertragende Daten (@<path/to/file> für Dateien) |
 | `-n` | Nutzung der `.netrc` für die Authentifikation (wird im Home-Verzeichnis vom Benutzer gesucht) |
