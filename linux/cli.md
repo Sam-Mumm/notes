@@ -13,7 +13,7 @@ chmod [-R] <Rechte> <Datei/Verzeichnis>
 ---
 
 #### Cronjob
-![](cronjob.png) 
+![cronjob](cronjob.png) 
 ##### Editieren der Cronjobs (für Benutzer *user*)
 ```
 crontab -e [-u <user>]
@@ -22,6 +22,26 @@ crontab -e [-u <user>]
 ##### Anzeigen der Cronjobs (für Benutzer *user*)
 ```
 crontab -l [-u <user>]
+```
+
+---
+
+#### cURL
+```
+curl <parameter> <URL>
+```
+
+|<Optionen>| Erklärung|
+| --- | --- |
+| -u<User>:<Password> | Benutzer und Passwort für die Authentifikation |
+| -X <POST|GET> | Typ des Requests |
+| -H <Header> | Zu übertragender Header |
+| -d<Payload> | Zu übertragende Daten (@<path/to/file> für Dateien) |
+| -n | Nutzung der `.netrc` für die Authentifikation (wird im Home-Verzeichnis vom Benutzer gesucht) |
+
+##### Aufbau .netrc
+```
+machine <Hostname|FQDN> login <user> password <password>
 ```
 
 ---
@@ -61,6 +81,14 @@ $ netstat <Optionen>
 ```
 find [/path/to/directory] -iname [Datei]
 ```
+---
+#### rsync - Synchronisieren von Dateien und Verzeichnissen
+##### Sync' anhand einer Liste
+```
+rsync -aSvuc --recursive --files-from=</path/to/backup.list> </path/to/source> </path/to/target> 
+```
+
+**Anmerkung:** Die Einträge in der `backup.list` müssen relativ zu dem Verzeichnis im rsync-Aufruf sein
 
 ---
 #### PDF-Dateien manipulieren
