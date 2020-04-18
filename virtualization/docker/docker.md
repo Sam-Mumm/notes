@@ -31,7 +31,13 @@ Aber hier eine Auswahl der Befehle die man regelmäßig benötigt
 
 
 ## Nützliches
-#### Alle Tags von einem Image
+### Alle Tags von einem Image
 ```
 $ wget -q https://registry.hub.docker.com/v1/repositories/debian/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'
+```
+
+### Befehle
+#### Arbeiten in einem Container
+```
+$ docker exec -ti <Containername> <Binary_im_Container>
 ```
