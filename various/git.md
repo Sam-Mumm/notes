@@ -33,3 +33,15 @@ Finished one cherry-pick.
 
 $ git push
 ```
+
+### Partielles Merge von einem anderen Branch (develop -> master)
+```
+$ git branch
+  master
+* develop
+$ git checkout master
+$ git checkout develop /path/to/files/to/merge
+$ git add *
+$ git commit -m "..."
+$ git push
+```
