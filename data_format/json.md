@@ -1,7 +1,7 @@
 # JSON
 ## Backus-Naur Form
 ## Beispiel
-Abkürzung für **Ja**vaScript **O**bject **N**otation
+Abkürzung für **J**avaScript **O**bject **N**otation
 
 ```
 {

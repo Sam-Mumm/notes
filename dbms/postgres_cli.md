@@ -23,6 +23,35 @@ Eine Liste der grundlegenden Befehle, eine vollständige Liste der Befehle sind 
 | <code>\c  Datenbankname </code> | Verbinden zur übergebenen Datenbank |
 | <code>\dt</code> | Auflisten der Tabellen der Datenbank |
 
+## Benutzerverwaltung
+### Erstellen von Benutzern
+```
+CREATE USER <username> with encrypted password '<password>';
+```
+
+
+### Setzen von Berechtigungen
+#### ... auf Datenbank-Ebene
+```
+GRANT <permission> privileges on database <database> to <username>;
+```
+
+Auswahl an gültigen Werten für `permission`:
+  - `all`
+  - `create`
+  - `connect`
+
+#### ... auf Tabellen-Ebene
+```
+GRANT <permission> privileges on table <table> to <username>;
+```
+
+Auswahl an gültigen Werten für `permission`:
+  - `select`
+  - `insert`
+  - `delete`
+  - `update`
+
 ## Backup und Restore
 Die folgende Befehle müssen auf der Kommandozeile des Hosts d.h. nicht in der Datenbank ausgeführt werden:
 

@@ -25,7 +25,7 @@ $ pip install [--proxy=https://user@<proxy>:port] -r requirements.txt
 
 #### Installation aus einer eigenen Paketquelle
 ```
-$ pip install [--proxy=https://user@<proxy>:port] --index-url https://test.pypi.org/simple/
+$ pip install [--proxy=https://user@<proxy>:port] --index-url 
 ```
 
 ### Generieren von Paketlisten
