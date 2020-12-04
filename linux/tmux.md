@@ -7,6 +7,12 @@ Jeder Befehl beginnt mit dem drücken von <kbd>Strg</kbd>+<kbd>B</kbd> gefolgt v
 | Taste | Ergebnis |
 | --- | --- |
 | <kbd>C</kbd> | Erstellt ein neues Fenster |
+| <kbd>&</kbd> | Schließt das aktuelle Fenster |
+| <kbd>"</kbd> | Teilt das Panel horizontal |
+| <kbd>%</kbd> | Teilt das Panel vertikal |
+| <kbd>n</kbd> | nächstes Fenster |
+| <kbd>p</kbd> | vorheriges Fenster  |
+| <kbd>q</kbd> <kbd>0</kbd> ... <kbd>9</kbd> | Wechsel zum Fenster mit der angegeben Nummer|
 
 
 ## Aufrufe
@@ -21,6 +27,3 @@ $ tmux new -s <name>
 ```
 $ tmux attach -t <name>
 ```
-
-
-<kbd>Z</kbd>
