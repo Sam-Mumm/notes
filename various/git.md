@@ -4,18 +4,22 @@
 ### Abfragen von Einstellungen
 ```
 # Abfragen vom Proxy fuer HTTP
-$ git config --global --get http.proxy
+$ git config --global --get <Setting>
 ```
 
-### Proxy konfigurieren
-#### Setzen
+### Beispiele
+
+#### Proxy konfigurieren
+##### Setzen
 ```
-$ git config --global http.proxy http://user:password@proxy.example.com:8080
+$ git config --global http.proxy http://user:password@proxy.example.com:<port>
+$ git config --global https.proxy http://user:password@proxy.example.com:<port>
 ```
 
-#### Entfernen
+##### Entfernen
 ```
 $ git config --global --unset http.proxy
+$ git config --global --unset https.proxy
 ```
 
 ## Stages
