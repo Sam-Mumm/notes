@@ -3,11 +3,22 @@
 ## Konfiguration
 ### Abfragen von Einstellungen
 ```
-# Abfragen vom Proxy fuer HTTP
-$ git config --global --get <Setting>
+$ git config --<global|system> --get <Setting>
 ```
 
 ### Beispiele
+#### Remote-git-Repository
+##### Abfragen
+```
+# Schluessel: remote.origin.url
+# Alternative
+$ git remote -v
+```
+
+##### Setzen
+```
+$ git remote set-url <URL> 
+```
 
 #### Proxy konfigurieren
 ##### Setzen
