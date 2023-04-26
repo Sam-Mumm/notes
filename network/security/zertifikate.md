@@ -8,6 +8,8 @@ $ openssl req -out <csr>.csr -new -newkey rsa:2048 -nodes -keyout <private-key>.
 
 # Auf der Basis von einem vorhandenen Schlüssel
 $ 
+
+# Validieren von Zertifikaten
 ```
 
 ## Konvertieren
