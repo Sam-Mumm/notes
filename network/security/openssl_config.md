@@ -1,0 +1,21 @@
+# OpenSSL - Konfigurationsdatei
+```ini
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = DE
+ST = NRW
+L = Dortmund
+O = ACME Inc
+
+[v3_req]
+keyUsage = keyEncipherment, dataEncipherment
+extendedKeyUpdate = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.0 = example.com
+```
