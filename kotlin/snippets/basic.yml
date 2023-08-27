@@ -1,0 +1,15 @@
+fun main() {
+	println("Hello World")
+	and_all_we_forget()
+	var a = the_only_answer()
+	
+	println("The Answer is: ${a.toString()}")
+}
+
+fun and_all_we_forget() {
+	println("and the rest of the world")
+}
+
+fun the_only_answer():Int {
+	return 42
+}

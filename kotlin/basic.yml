@@ -1,0 +1,51 @@
+# Kotlin - Grundlagen
+
+## Main-Funktion
+```
+fun main() {
+	println("Hello World")
+	
+	var a = the_only_answer()
+	
+	println("The Answer is: ${a}")
+}
+```
+
+
+## Variable
+
+* **val**: nicht änderbare Variabledeklaration
+* **var**: änderbare Variabledeklaration
+
+Zugriff auf die Variable mittels: `${variablename}`
+
+### Listen
+```
+var glocke = listOf<String>("Festgemauert", "in", "der", "Erden")
+```
+
+## Methoden
+### Struktur
+```
+fun <Funktionsname>(val <Parameter>: <Datentyp>):<Rueckgabewert> {
+// ...
+} 
+```
+
+#### Beispiel
+```
+fun the_only_answer():Int {
+	return 42
+}
+```
+
+### Rückgabewert
+keine explizite Angabe von `void`, sonst:
+* Int
+* String
+* Boolean
+
+
+####
+
+
