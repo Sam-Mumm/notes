@@ -60,3 +60,23 @@ $ git add *
 $ git commit -m "..."
 $ git push
 ```
+
+### Lösen von Merge-Konflikten aus Feature-Branchs
+```
+# Holen vom letzten Stand des Masters
+$ git checkout master
+$ git pull origin master
+
+# Wechseln zum Feature-Branch
+$ git checkout feature/tool
+$ git pull origin feature/tool
+
+# Ermitteln der Mergekonflikte 
+$ git merge master
+$ git status
+
+# Änderung versionieren
+git add <file>
+git commit -m "<message>"
+git pushin origin feature/tool
+```
